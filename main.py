@@ -196,8 +196,5 @@ def submit_feedback():
 
 # ================== RUN ==================
 if __name__ == '__main__':
-    print("--------------------------------------------------")
-    print("   Disease Prediction App is running successfully! ")
-    print("   Access the app at: http://127.0.0.1:5000        ")
-    print("--------------------------------------------------")
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
