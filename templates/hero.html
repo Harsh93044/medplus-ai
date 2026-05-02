@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MedPulse | Your Health, Powered by AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1; /* Indigo */
+            --primary-hover: #4f46e5;
+            --accent: #10b981; /* Emerald */
+            --slate-50: #f8fafc;
+            --slate-200: #e2e8f0;
+            --slate-900: #0f172a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #eef2ff 100%);
+            background-attachment: fixed;
+            color: var(--slate-900);
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 18px 0;
+            border-bottom: 1px solid var(--slate-200);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--primary) !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.05), transparent 40%);
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #64748b;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .btn-main {
+            background: var(--primary);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-main:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.4);
+            color: white;
+        }
+
+        /* Feature Cards */
+        .card-feature {
+            background: white;
+            border: 1px solid var(--slate-200);
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.3s;
+            height: 100%;
+        }
+
+        .card-feature:hover {
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+
+        .icon-accent {
+            width: 60px;
+            height: 60px;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+
+        .card-feature h3 {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .card-feature p {
+            color: #64748b;
+            margin-bottom: 0;
+        }
+
+        /* Gradient Circle for Visual Interest */
+        .floating-circle {
+            position: absolute;
+            z-index: -1;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: 10%;
+            right: -100px;
+        }
+
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            bottom: 10%;
+            left: -50px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            background: #fff;
+            border-top: 1px solid var(--slate-200);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="floating-circle circle-1"></div>
+    <div class="floating-circle circle-2"></div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fa-solid fa-staff-snake"></i> MedPulse
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="/">Check Health</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="badge bg-indigo-100 text-primary px-3 py-2 rounded-pill mb-4" style="background: rgba(99, 102, 241, 0.1);">Health First</span>
+                    <h1>Stay Healthy. <br><span>Check Up with MedPulse.</span></h1>
+                    <p>Get instant medical insights and personalized health checks powered by advanced machine learning. Your wellness, simplified.</p>
+                    <a href="/" class="btn-main">Start Free Checkup</a>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+                    <div style="position: relative; display: inline-block;">
+                        <img src="/static/checkup_hero.png" alt="MedPulse Checkup" style="width: 100%; max-width: 500px; border-radius: 30px; box-shadow: 0 30px 60px -12px rgba(0,0,0,0.25);">
+                        <div style="position: absolute; bottom: -20px; left: -20px; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                            <i class="fa-solid fa-heart-pulse text-primary mb-2 d-block" style="font-size: 1.5rem;"></i>
+                            <span class="fw-bold">Stay Fit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-feature">
+                        <div class="icon-accent"><i class="fa-solid fa-stethoscope"></i></div>
+                        <h3>Smart Prediction</h3>
+                        <p>Analyze complex symptom patterns instantly with our neural network-based diagnosis engine.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-feature">
+                        <div class="icon-accent" style="background: rgba(16, 185, 129, 0.1); color: var(--accent);"><i class="fa-solid fa-pills"></i></div>
+                        <h3>Curated Care</h3>
+                        <p>Receive validated medication insights and recovery steps tailored to your predicted health condition.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-feature">
+                        <div class="icon-accent" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;"><i class="fa-solid fa-leaf"></i></div>
+                        <h3>Health Routine</h3>
+                        <p>Access customized dietary advice and workout routines to support your journey back to full health.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-feature text-center">
+                        <h3 class="mb-4">Share Your Feedback</h3>
+                        <form action="/submit_feedback" method="POST" class="d-flex gap-2">
+                            <input type="text" name="feedback" class="form-control rounded-pill border-2 px-4" 
+                                   placeholder="Tell us what you think..." required>
+                            <button type="submit" class="btn-main py-2" style="border: none;">Post</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Scrolling Section -->
+    <section class="py-5 overflow-hidden" style="background: rgba(99, 102, 241, 0.03); border-top: 1px solid var(--slate-200);">
+        <div class="container-fluid">
+            <div class="feedback-marquee">
+                <div class="marquee-content">
+                    {% for f in feedbacks %}
+                    <div class="feedback-item">
+                        <i class="fa-solid fa-quote-left text-primary opacity-25 me-2"></i>
+                        {{ f }}
+                    </div>
+                    {% endfor %}
+                    <!-- Duplicate for seamless loop -->
+                    {% for f in feedbacks %}
+                    <div class="feedback-item">
+                        <i class="fa-solid fa-quote-left text-primary opacity-25 me-2"></i>
+                        {{ f }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .feedback-marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: scroll-feedback 30s linear infinite;
+        }
+        .feedback-item {
+            display: inline-block;
+            background: white;
+            padding: 15px 30px;
+            border-radius: 100px;
+            margin: 0 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            font-weight: 600;
+            border: 1px solid var(--slate-200);
+        }
+        @keyframes scroll-feedback {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+    </style>
+
+    <footer>
+        <div class="container text-center">
+            <a class="navbar-brand justify-content-center" href="/">MedPulse</a>
+            <p class="text-muted mt-3">Advanced Healthcare Intelligence for everyone.</p>
+            <div class="mt-4">
+                <a href="#" class="text-muted mx-2 text-decoration-none">Twitter</a>
+                <a href="#" class="text-muted mx-2 text-decoration-none">LinkedIn</a>
+                <a href="/contact" class="text-muted mx-2 text-decoration-none">Contact</a>
+            </div>
+            <hr class="my-5 border-slate-200">
+            <p class="text-muted small">© 2026 MedPulse AI. Created by Vaibhav, Amritanshu, Akash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
