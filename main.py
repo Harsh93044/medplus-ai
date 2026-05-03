@@ -2,6 +2,8 @@ from flask import Flask, request, render_template, redirect, url_for
 import ast
 import pandas as pd
 import pickle
+import json
+import os
 from sklearn.preprocessing import LabelEncoder
 
 # ================== INIT APP ==================
@@ -142,9 +144,6 @@ def predict():
                            medications=medications,
                            my_diet=diet,
                            workout=workout)
-
-import json
-import os
 
 # ================== FEEDBACK SYSTEM ==================
 FEEDBACK_FILE = "feedback.json"
